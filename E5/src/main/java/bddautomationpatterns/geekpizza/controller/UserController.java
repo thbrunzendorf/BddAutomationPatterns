@@ -33,7 +33,7 @@ public class UserController {
         GeekPizzaRepository repository = new GeekPizzaRepository();
         User existingUser = repository.findUserByName(registerRequestDto.getUserName());
         if (existingUser != null)
-            repository.getUsers().remove(existingUser);
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Username is used");
 
         User user = new User(registerRequestDto.getUserName(), registerRequestDto.getPassword());
 

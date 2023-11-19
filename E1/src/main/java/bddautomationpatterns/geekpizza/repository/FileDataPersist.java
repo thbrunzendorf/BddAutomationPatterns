@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FileDataPersist implements DataPersist {
-    private Path databaseFilePath = Paths.get(System.getenv("TMP"), "GeekPizzaDbJava.json");
+    private Path databaseFilePath = Paths.get(System.getProperty("java.io.tmpdir"), "GeekPizzaDbJava.json");
 
     @Override
     public void save(String data) throws Exception {
