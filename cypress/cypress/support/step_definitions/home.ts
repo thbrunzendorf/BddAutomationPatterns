@@ -1,6 +1,6 @@
 import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
 
-let storedUserName = "";
+let storedUserName: string = "";
 
 const visitHomePage = () => cy.visit("http://localhost:8019/");
 
@@ -12,7 +12,7 @@ Then("the home page main message should be: {string}", (message) => {
 
 Given(
   "there is a user registered with user name {string} and password {string}",
-  (userName, password) => {
+  (userName: string, password: string) => {
     storedUserName = userName;
     visitHomePage();
     cy.get("a").contains("Login").click();
