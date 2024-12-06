@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "nodenext"
+    "module": "nodenext",
+    "baseUrl": "."
   }
 }
