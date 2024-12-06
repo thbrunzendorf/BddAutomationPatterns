@@ -13,6 +13,8 @@ Rule: The pizzas the client has put into the basket are listed on the My Order p
     Then the ordered items should be listed on the my order page
 
 
+# Exercise: Implement!
+
 #Rule: Additional pizzas can be added to the basket
 #
 #  @login
