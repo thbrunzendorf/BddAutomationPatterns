@@ -12,7 +12,7 @@ Feature: Order Details
     Given the client has items in the basket
     When the client specifies <date> at <time> as delivery time
     Then the order should indicate that the delivery date is <date>
-    #And the delivery time should be <time>
+    And the delivery time should be <time>
 
     Examples:
       | description         | date         | time  |
