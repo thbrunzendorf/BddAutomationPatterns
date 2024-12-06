@@ -7,7 +7,7 @@ import {
 
 import * as chrono from "chrono-node";
 
-Before(() => {
+Before({ tags: "@reset" }, () => {
   visitHomePage();
   cy.get("a").contains("[Reset Data]").click();
 });
