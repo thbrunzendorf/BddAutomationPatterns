@@ -1,5 +1,20 @@
 # Exercises
 
+## E0: Getting started
+
+1. Take a look at the `simple_price_calculation.feature` and try to execute it. The first scenario (Empty order) should succeed and the second scenario (Order with a few different pizzas) should fail with a pending step. Try to implement this step in the `PriceCalculationStepDefinitions` class and make the scenario pass.
+
+2. Review the `TypeRegistryConfiguration` class that defines a custom `ParameterType` for `OrderItemSize`. Try to simplify your implementation from step 1. Hint: you need to change a small detail in the feature file.
+
+3. Uncomment the steps related to the expected delivery costs and total price in `simple_price_calculation.feature` and execute it again. What do you notice? Can you spot and fix the bug?
+
+4. Now take a look at the `table_price_calculation.feature`.
+   Try to make the first scenario (Order with a few larger pizzas) pass.
+
+5. Extend your glue code implementation, so that the second scenario (Order with extra cheese) will pass as well, without failing the first scenario again.
+
+6. Review the `TypeRegistryConfiguration` class that defines a custom `DataTableType` for `OrderItem`. Try to simplify your implementation from step 4.
+
 ## E1: Driver pattern
 
 Most of the step definition methods use "drivers" to perform automation tasks instead of directly working with the REST API requests (managed through the `WebApiContext` class).
